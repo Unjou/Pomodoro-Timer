@@ -102,12 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('dark-mode');
     }
 
-    if (isRunning) {
-        startTimer();
-    }
-
     startButton.addEventListener('click', function() {
-        if (!hasBeenSpedUp) {
+        if (!hasBeenSpedUp && !isRunning) {
             speed /= 2;
             hasBeenSpedUp = true;
             clearInterval(interval);
